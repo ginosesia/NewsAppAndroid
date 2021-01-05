@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="12dp"
+    android:id="@+id/news_cell">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingRight="0dp"
+                    android:layout_gravity="right"
+                    android:columnCount="2"
+                    android:rowCount="1">
+
+                    <TextView
+                        android:id="@+id/articlePublisher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:text="publisher"
+                        android:textAllCaps="true"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_gravity="right"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_action_more_horiz"
+                        android:backgroundTint="@color/black"
+                        android:onClick="@showPopUpMenu"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_width="20dp"/>
+
+
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/articleTitle"
+                    android:text="Article Title"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/articleTimeStamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Time"
+                    android:textSize="10dp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="1dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/articleSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:text="Article Summary"
+                android:textStyle="normal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/articleUrl"
+        android:visibility="invisible"/>
+
+</androidx.cardview.widget.CardView>
